@@ -1,0 +1,28 @@
+Package: greyLitScrapR
+Title: A Scraper for Grey Literature
+Version: 0.0.0.9000
+Authors@R: 
+    person("Chris", "Pritchard", "chris.pritchard@ntu.ac.uk", role = c("aut", "cre")),
+    person("Fiona", "Kastel", "fiona.kastel@icloud.com", role = c("aut")),
+    person("Shwetangi", "Sahu", "ssahu@3ieimpact.org", role = c("aut")),
+    person("Lucas", "Sempe", "lsempe@3ieimpact.org", role = c("aut"))
+Description: Scrapes Grey Literature
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    tidyverse,
+    robotstxt,
+    rvest,
+    textclean,
+    progress,
+    polite,
+    readr,
+    stringi,
+    httr,
+    stringr,
+    purrr,
+    parallel
+Depends:
+    dplyr
