@@ -1,11 +1,11 @@
 ---
 cega:
-  title: //a[contains(@class, 'c-list-item__link')]/text()
-  link: //a[contains(@class, 'c-list-item__link')]/@href
-  last_page: "//a[contains(@class, 'c-pagination__button c-pagination__button--last')"/@href
+  title: "//a[contains(@class, 'c-list-item__link')]/text()"
+  link: "//a[contains(@class, 'c-list-item__link')]/@href"
+  last_page: "//a[contains(@class, 'c-pagination__button--last')]/@href"
   last_page_regex: "(?<=current-page\\=)\\d+"
-  date: //div[contains(@class, 'c-list-item__meta-key')]/text()
-  type: //div[contains(@class, 'c-list-item__type')]/text()
+  date: "//div[contains(@class, 'c-list-item__meta-key')]/text()"
+  type: "//div[contains(@class, 'c-list-item__type')]/text()"
 escholarship:
   authors: "//ul[contains(@class, 'c-authorlist_list')]/li/text()"
   abstract: "//div[contains(@class, 'c-clientmarkup')]//p/text()"
@@ -18,7 +18,7 @@ atai_research:
 jpal:
   title: "//div[contains(@class, 'group-text-container')]/h3/a/text()"
   link: "//div[contains(@class, 'group-text-container')]/h3/a/@href"
-  last_page: //ul[contains(@class, 'pager__items js-pager__items')]/li/a[contains(@title, 'Go to last page')]/@href
+  last_page: "//ul[contains(@class, 'pager__items js-pager__items')]/li/a[contains(@title, 'Go to last page')]/@href"
   last_page_regex: "(?<=page\\=)[0-9]+"
   authors: "//div[contains(@class, 'evaluation-full-researchers')]/text()"
   abstract: "//div[contains(@class, 'evaluation-full-abstract')]/p/text()"
