@@ -37,3 +37,27 @@ get_articles_from_page <- function(
   }
   return(list(page_url = url, titles = titles, links = links, dates = dates))
 }
+
+#NOT WORKING
+get_all_articles_from_site <- function(
+  base_url,
+  first_page = 1,
+  last_page = 1,
+  xpath_title = NULL,
+  xpath_link = NULL,
+  xpath_date = NULL,x
+  session = NULL
+) {
+  article_list <- list()
+  all_page_urls <- paste0(
+    base_url,
+    first_page:last_page
+  )
+
+  lapply(all_page_urls, get_articles_from_page())
+  for (url in all_page_urls) {
+    print(url)
+    append(article_list, url)
+  }
+  summary(article_list)
+}
