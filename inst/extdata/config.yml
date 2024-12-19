@@ -1,0 +1,91 @@
+---
+cega:
+  title: //a[contains(@class, 'c-list-item__link')]/text()
+  link: //a[contains(@class, 'c-list-item__link')]/@href
+  last_page: "//a[contains(@class, 'c-pagination__button c-pagination__button--last')"/@href
+  last_page_regex: "(?<=current-page\\=)\\d+"
+  date: //div[contains(@class, 'c-list-item__meta-key')]/text()
+  type: //div[contains(@class, 'c-list-item__type')]/text()
+escholarship:
+  authors: "//ul[contains(@class, 'c-authorlist_list')]/li/text()"
+  abstract: "//div[contains(@class, 'c-clientmarkup')]//p/text()"
+  pdf_link: "//a[contains(@class, 'o-download__button')]/@href"
+  doi: "//a[contains(@class, 'c-pubinfo__link')]/@href"
+atai_research:
+  title: "//h1[contains(@class, 'mt-4 font-serif')]/text()"
+  authors: "//div[contains(@class, 'row col-12 col-lg-8 mx-auto')]/div[2]/p[2]/text()"
+  pdf_link: "//a[contains(@href, '.pdf')]/@href"
+jpal:
+  title: "//div[contains(@class, 'group-text-container')]/h3/a/text()"
+  link: "//div[contains(@class, 'group-text-container')]/h3/a/@href"
+  last_page: //ul[contains(@class, 'pager__items js-pager__items')]/li/a[contains(@title, 'Go to last page')]/@href
+  last_page_regex: "(?<=page\\=)[0-9]+"
+  authors: "//div[contains(@class, 'evaluation-full-researchers')]/text()"
+  abstract: "//div[contains(@class, 'evaluation-full-abstract')]/p/text()"
+  pdf_link: "//div[contains(@class, 'evaluation-full-research-papers eval-info')]/@href"
+  sectors: "//div[contains(@class, 'group-tags')]/text()"
+  locations: "//div[contains(@class, 'evaluation-full-location eval-info')]/text()"
+  sample: "//div[contains(@class, 'evaluation-full-sample eval-info')]/text()"
+  timeline: "//div[contains(@class, 'evaluation-full-timeline eval-info')]/text()"
+  interventions: "//div[contains(@class, 'evaluation-full-intervention-type eval-info')]/ul/text()"
+  outcomes: "//div[contains(@class, 'evaluation-full-outcome-interest eval-info')]/ul/text()" 
+afdb:
+  title: "//span[@class = 'views-field views-field-title']/span/a/text()"
+  link: "//span[@class = 'views-field views-field-title']/span/a/@href"
+  last_page: "//li[contains(@class, '-last')]/a/@href"
+  last_page_regex: "(.*)page="
+  last_page_prefix: "(page=).*"
+  date: "//span[@class = 'date-display-single']/text()"
+  abstract: "//div[@class = 'field field-name-body field-type-text-with-summary field-label-hidden']/div/div/p/text()"
+  pdf_link: "//div[@class = 'field field-name-field-evaluation-reports field-type-file field-label-hidden']/div/div/iframe[@class = 'pdf']/@href"
+ipa: 
+  last_page: "//li[contains(@class, '--last')]/a/@href"
+  last_page_regex: "(.*)page="
+  last_page_prefix: "(page=).*"
+  title: "//h3[@class = 'title']/span/text()"
+  link: "//a[@class = 'link-stnd ']/@href"
+  authors: "//div[contains(@class, 'name notranslate')]/text()"
+  abstract: "//div[@class = 'field__item']/p/text()"
+  date: "//div[contains(@class, 'cb-date')]/text()"
+  pdf_link: "//span[contains(@class, 'file file')]/a/@href"
+  keywords: "//div[contains(@class, 'cb-tags')]/div/a/text()"
+idb:
+  last_page: "//ul[contains(@class, 'pager__items js-pager__items')]/li/a[contains(@title, 'Go to last page')]/@href"
+  last_page_regex: "(?<=page\\=)[0-9]+"
+  title: "//div[contains(@class, 'views-field views-field-field-title')]/span/a/text()"
+  link: "//div[contains(@class, 'views-field views-field-field-title')]/span/a/@href"
+  authors: "//div[contains(@class, 'field field--name-field-author field--type-entity-reference field--label-inline')]/div[contains(@class, 'field__items')]/text()"
+  abstract: "//div[contains(@class, 'field field--name-field-abstract field--type-string-long field--label-hidden field__item')]/text()"
+  date: "//div[contains(@class, 'field field--name-field-date-issued-text field--type-datetime field--label-inline clearfix')]/div[contains(@class,'field__item')]/text()"
+  doi: "//div[contains(@class, 'field field--name-field-doi field--type-link field--label-inline clearfix')]/div/a/@href"
+  language: "//a[contains(@class, 'fdl')]/text()"
+adb: 
+  last_page: "//li[contains(@class, '--last')]/a/@href"
+  last_page_regex: "(.*)page="
+  last_page_prefix: "(page=).*"
+  title: "//span[@class = 'field-content']/h3/a/text()"
+  link: "//span[@class = 'field-content']/h3/a/@href"
+  abstract: "//div[@class = 'mb-2']/text()"
+  date: "//div[contains(@class, 'text-muted h4')]/text()"
+  pdf_link: "//span[contains(@class, 'panel-title h5')]/a/@href"
+  other_info: "//td[contains(@width, '85')]/text()"
+fcdo: 
+  title: "//li[contains(@class, 'gem-c-document-list__item')]/div/a/text()"
+  link: "//li[contains(@class, 'gem-c-document-list__item')]/div/a/@href"
+  authors: "//dl[contains(@class, 'app-c-important-metadata__list')]/text()"
+  abstract: "//div[contains(@class, 'gem-c-govspeak govuk-govspeak ')]/p/text()"
+  date: "//dl[contains(@class, 'gem-c-metadata__list')]/dd[2]/text()"
+  pdf_link: "//div[contains(@class, 'gem-c-govspeak govuk-govspeak ')]//a/@href"
+  other_info: "//dl[contains(@class, 'app-c-important-metadata__list')]/text()"
+ec: 
+  last_page: "//li[contains(@class, '--last')]/a/@href"
+  last_page_regex: "(.*)page="
+  last_page_prefix: "(page=).*"
+  link: "//h1[@class = 'ecl-content-block__title']/a/@href"
+  title: "//h1[@class = 'ecl-content-block__title']/a/text()"
+  date: "//dl[@class = 'ecl-description-list ecl-description-list-horizontal']/dd/text()"
+  authors: "//dl[@class = 'ecl-description-list ecl-description-list-horizontal']/dd/dd/a/text()"
+  abstract: "//div[@class = 'ecl-u-mb-2xl']/div/text()"
+  pdf_link: "//div[@class = 'ecl-file__container']/a/@href"
+  other_info: "//dl[@class = 'ecl-description-list ecl-description-list-horizontal']/text()"
+...
