@@ -49,7 +49,7 @@ ipa:
   date: "//div[contains(@class, 'cb-date')]/text()"
   pdf_link: "//span[contains(@class, 'file file')]/a/@href"
   keywords: "//div[contains(@class, 'cb-tags')]/div/a/text()"
-idb:
+iadb:
   last_page: "//ul[contains(@class, 'pager__items js-pager__items')]/li/a[contains(@title, 'Go to last page')]/@href"
   last_page_regex: "(?<=page\\=)[0-9]+"
   title: "//div[contains(@class, 'views-field views-field-field-title')]/span/a/text()"
